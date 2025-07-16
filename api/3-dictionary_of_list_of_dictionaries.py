@@ -27,7 +27,9 @@ def fetch_all_tasks_and_export() -> None:
         username = user.get("username")
 
         # Fetch todos for this user
-        todos_url = f"https://jsonplaceholder.typicode.com/todos?userId={user_id}"
+        todos_url = (
+                     f"https://jsonplaceholder.typicode.com/todos?userId={user_id}"
+                    )
         todos_resp = requests.get(todos_url)
         todos_resp.raise_for_status()
         todos = todos_resp.json()
