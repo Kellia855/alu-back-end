@@ -8,7 +8,6 @@ import requests
 import sys
 
 
-
 def fetch_and_export_to_csv(employee_id: int) -> None:
     """
     Fetch employee tasks from API and export them to CSV.
