@@ -5,7 +5,7 @@ Script that fetches an employee's TODO list and exports it to JSON.
 """
 
 import requests
-import json
+import sys
 
 
 def fetch_all_tasks_and_export() -> None:

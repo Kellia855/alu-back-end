@@ -3,8 +3,8 @@
 Script that fetches an employee's TODO list and exports it to JSON.
 """
 import json
-import sys
 import requests
+import sys
 
 
 

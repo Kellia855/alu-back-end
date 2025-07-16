@@ -3,8 +3,8 @@
 script to fetch employee's todo list and return progress
 """
 
-import sys
 import requests
+import sys
 
 
 def fetch_todo_progress(employee_id):

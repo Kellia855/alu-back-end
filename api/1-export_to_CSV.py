@@ -3,9 +3,9 @@
 """
 script to export employee's TODO list to a CSV file
 """
-import sys
 import csv
 import requests
+import sys
 
 
 
