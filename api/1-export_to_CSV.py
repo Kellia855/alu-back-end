@@ -24,7 +24,10 @@ def fetch_and_export_to_csv(employee_id: int) -> None:
     username = user.get("username")
 
     # Fetch todos
-    todos_url = f"https://jsonplaceholder.typicode.com/todos?userId={employee_id}"
+    todos_url = (
+         "https://jsonplaceholder.typicode.com/todos"
+         f"?userId={employee_id}"
+    )
     todos_response = requests.get(todos_url)
     todos_response.raise_for_status()
     todos = todos_response.json()
