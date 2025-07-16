@@ -7,7 +7,6 @@ import requests
 import sys
 
 
-
 def fetch_and_export_to_json(employee_id: int) -> None:
     """
     Fetch employee tasks and export to JSON file.
@@ -23,7 +22,10 @@ def fetch_and_export_to_json(employee_id: int) -> None:
     username = user.get("username")
 
     # Fetch todos
-    todos_url = f"https://jsonplaceholder.typicode.com/todos?userId={employee_id}"
+    todos_url = (
+         "https://jsonplaceholder.typicode.com/todos"
+         f"?userId={employee_id}"
+    )
     todos_response = requests.get(todos_url)
     todos_response.raise_for_status()
     todos = todos_response.json()
@@ -32,6 +34,7 @@ def fetch_and_export_to_json(employee_id: int) -> None:
     task_list = [{
         "task": task.get("title"),
         "completed": task.get("completed"),
+
         "username": username
     } for task in todos]
 
