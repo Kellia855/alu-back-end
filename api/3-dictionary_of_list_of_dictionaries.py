@@ -4,6 +4,7 @@
 Script that fetches an employee's TODO list and exports it to JSON.
 """
 
+import json
 import requests
 import sys
 
